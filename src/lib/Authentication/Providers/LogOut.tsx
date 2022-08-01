@@ -8,11 +8,11 @@ const logOut = async () => {
   
  return await signOut(firebase.auth).then(() => {
     SessionCookie.remove()
-    const data:returnAuthentication = { result:"true", user:{}, error:{} }
+    const data:returnAuthentication = { success:"true", user:{}, error:{} }
     return data;
   }).catch((error) => {
     SessionCookie.remove()
-    const data:returnAuthentication = { result:"false", user:{}, error }
+    const data:returnAuthentication = { success:"false", user:{}, error }
     return data;
   });
 }
