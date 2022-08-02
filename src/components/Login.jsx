@@ -1,15 +1,8 @@
-import { Authentication } from "../lib/Authentication/Authentication"
-
 import useAuth from "../hooks/useAuth";
-
 
 export default function Login(props) {
 
   const { signInGoogle, signInGithub, logOut, user, error, loading } = useAuth();
-
-  const LogOutGitHub = () => {
-    Authentication.GitHub.logOut()
-  };
 
   return (
     <>

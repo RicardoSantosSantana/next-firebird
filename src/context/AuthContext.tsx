@@ -34,7 +34,7 @@ export function AuthProvider( { children } :Props) {
         setLoading(false)
     }
 
-    const value = { signInGoogle, signInGithub, logOut, user, error, loading }
+    const value:authContextType = {  signInGoogle, signInGithub, logOut, user, error, loading }
 
     return (
         <AuthContext.Provider value={value}>

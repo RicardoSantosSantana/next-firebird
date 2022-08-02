@@ -4,8 +4,7 @@ import { returnAuthentication } from "../Interface";
 import  SessionCookie  from '../SessionCookie'
 
  
-const logOut = async () => {
-  
+const logOut = async () => {  
  return await signOut(firebase.auth).then(() => {
     SessionCookie.remove()
     const data:returnAuthentication = { success:"true", user:{}, error:{} }
