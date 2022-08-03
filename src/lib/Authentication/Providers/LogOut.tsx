@@ -3,7 +3,6 @@ import { firebase } from '../../firebase';
 import { returnAuthentication } from "../Interface";
 import  SessionCookie  from '../SessionCookie'
 
- 
 const logOut = async () => {  
  return await signOut(firebase.auth).then(() => {
     SessionCookie.remove()

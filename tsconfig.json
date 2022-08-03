@@ -21,6 +21,6 @@
     "**/*.tsx", 
     "src/**/*.ts", 
     "src/**/*.tsx"
-  ],
+, "src/lib/firebase.tsx"  ],
   "exclude": ["node_modules"]
 }
