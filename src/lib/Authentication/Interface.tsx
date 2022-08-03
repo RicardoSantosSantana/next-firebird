@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface Props {
     children: ReactNode;
@@ -11,11 +11,11 @@ export interface IUser {
     provider: string;
     photoUrl: string;
 }
-//Create context type
-export type authContextType = {        
-    signInGoogle:<Promise>() => void;
-    signInGithub:<Promise>() => void;
-    logOut:<Promise>() => void;
+// Create context type
+export type authContextType = {
+    signInGoogle:() => void;
+    signInGithub:() => void;
+    logOut:() => void;
     user: IUser | null;
     error:object,
     loading:boolean;
@@ -23,15 +23,15 @@ export type authContextType = {
 export type returnAuthentication = {
     success:string;
     user:any;
-    error:any 
+    error:any
 }
 
-//Create context default values
-export const authContextDefaultValues: authContextType = {    
-    signInGoogle: () => {},
-    signInGithub: () => {},
-    logOut: () => {},
-    user: null,    
-    error: {},
-    loading: false, 
-}; 
+// Create context default values
+export const authContextDefaultValues: authContextType = {
+	signInGoogle: Function,
+	signInGithub: Function,
+	logOut: Function,
+	user: null,
+	error: {},
+	loading: false,
+};

@@ -1,14 +1,13 @@
-import Login from '../components/Login'
+import Login from '../components/Login';
 
-const Home = (props) => {   
+function Home() {
+	return (
+		<>
+			<h1>OLA INDEX</h1>
+			<Login />
+		</>
 
-   return (
-    <>
-     <h1>OLA INDEX</h1>
-    <Login/>
-    </>
-    
-  )
+	);
 }
 
-export default Home
+export default Home;
