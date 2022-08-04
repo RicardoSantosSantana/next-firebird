@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard",
+        "plugin:@typescript-eslint/recommended"
+
+
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"        
+    ],
+    "rules": {
+        "prettier/prettier":"error",
+        "space-before-function-parent":"off",
+        "react/props-types": "off",
+        "@typescript/no-explicit-any":"on"
+    }
+}
